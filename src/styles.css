@@ -398,13 +398,132 @@ textarea {
   color: var(--accent-color);
 }
 
-@media (max-width: 620px) {
+/* Extra Small Devices (Mobile phones < 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+  }
+
+  .calendar-container {
+    max-width: 100%;
+  }
+
+  .theme-toggle-button {
+    top: -40px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .calendar-card {
+    border-radius: 8px;
+  }
+
+  .calendar-header {
+    height: 180px;
+  }
+
+  .hero-image {
+    background-position: center;
+  }
+
+  .month-banner {
+    width: 140px;
+    height: 110px;
+    padding-right: 12px;
+  }
+
+  .banner-content .year {
+    font-size: 1.1rem;
+  }
+
+  .banner-content .month {
+    font-size: 0.85rem;
+  }
+
+  .calendar-body {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .notes-section {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px;
+  }
+
+  .notes-title {
+    font-size: 0.85rem;
+    margin: 0 0 12px 0;
+  }
+
+  .notes-display {
+    min-height: 100px;
+    margin-bottom: 12px;
+  }
+
+  .note-line {
+    height: 0.8px;
+  }
+
+  .notes-textarea {
+    min-height: 70px;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .grid-panel {
+    padding: 16px;
+  }
+
+  .grid-header {
+    margin-bottom: 14px;
+    gap: 8px;
+  }
+
+  .month-year-display {
+    font-size: 0.9rem;
+  }
+
+  .nav-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .weekday-cell {
+    font-size: 0.6rem;
+  }
+
+  .date-cell {
+    font-size: 0.85rem;
+  }
+
+  .dates-grid {
+    gap: 6px;
+  }
+
+  .weekdays {
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Small Devices (Tablets & Phones 481px - 620px) */
+@media (min-width: 481px) and (max-width: 620px) {
   body {
     padding: 18px;
   }
 
   .calendar-container {
     max-width: 100%;
+  }
+
+  .theme-toggle-button {
+    top: -42px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
   }
 
   .calendar-card {
@@ -434,130 +553,117 @@ textarea {
 
   .notes-section {
     border-right: none;
+    border-bottom: 1px solid var(--border-color);
     padding: 20px;
   }
 
   .grid-panel {
     padding: 20px;
   }
+
+  .notes-textarea {
+    min-height: 80px;
+  }
 }
 
-.date-cell.empty {
-  background: transparent;
-}
-
-.day-button {
-  background: transparent;
-  border: none;
-  color: #2c3e50;
-  transition: all 0.2s ease;
-  padding: 0;
-}
-
-.day-button:hover {
-  background: #e8f1ff;
-}
-
-.day-button.highlighted {
-  background: #1e89e6;
-  color: white;
-  font-weight: 600;
-}
-
-.day-button.weekend-date:not(.highlighted) {
-  color: #1e89e6;
-}
-
-.notes-input-section {
-  padding: 24px;
-  border-top: 1px solid #e0e8f0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.notes-textarea {
-  width: 100%;
-  min-height: 100px;
-  padding: 14px;
-  border: 1px solid #d4dce8;
-  border-radius: 8px;
-  background: white;
-  color: #2c3e50;
-  line-height: 1.6;
-}
-
-.notes-textarea::placeholder {
-  color: #9db2c8;
-}
-
-.save-note-button {
-  align-self: flex-start;
-  padding: 10px 24px;
-  background: #1e89e6;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(30, 137, 230, 0.2);
-  transition: all 0.2s ease;
-}
-
-.save-note-button:hover {
-  background: #0f5bb7;
-  box-shadow: 0 6px 16px rgba(30, 137, 230, 0.3);
-}
-
-.save-note-button:active {
-  transform: translateY(1px);
-}
-
-@media (max-width: 600px) {
-  .app-shell {
-    padding: 16px;
+/* Medium Devices (Tablets 621px - 900px) */
+@media (min-width: 621px) and (max-width: 900px) {
+  .calendar-container {
+    max-width: 480px;
   }
 
-  .calendar-controls {
-    gap: 12px;
-    padding: 14px 16px;
-  }
-
-  .month-year-display {
-    font-size: 0.9rem;
-    min-width: auto;
-  }
-
-  .nav-button {
-    width: 36px;
-    height: 36px;
-    font-size: 1.3rem;
-  }
-
-  .calendar-body {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 20px 16px;
-  }
-
-  .calendar-header {
-    height: 200px;
-  }
-
-  .month-banner {
-    width: 160px;
-    height: 120px;
-  }
-
-  .banner-content .year {
+  .theme-toggle-button {
+    top: -45px;
+    width: 40px;
+    height: 40px;
     font-size: 1.4rem;
   }
 
-  .banner-content .month {
+  .calendar-header {
+    height: 240px;
+  }
+
+  .calendar-body {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .notes-section {
+    padding: 24px 18px;
+  }
+
+  .grid-panel {
+    padding: 22px;
+  }
+}
+
+/* Large Devices (Desktop 901px+) */
+@media (min-width: 901px) {
+  .calendar-container {
+    max-width: 520px;
+  }
+
+  .theme-toggle-button {
+    top: -45px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .calendar-header {
+    height: 260px;
+  }
+
+  .calendar-body {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .notes-section {
+    padding: 28px 22px;
+  }
+
+  .grid-panel {
+    padding: 24px 20px 28px 20px;
+  }
+}
+
+/* Landscape Orientation Adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  body {
+    padding: 12px 16px;
+  }
+
+  .calendar-header {
+    height: 180px;
+  }
+
+  .month-banner {
+    width: 140px;
+    height: 100px;
+  }
+
+  .banner-content .year {
     font-size: 1.1rem;
   }
 
-  .calendar-card {
-    border-radius: 8px;
+  .banner-content .month {
+    font-size: 0.85rem;
+  }
+
+  .notes-section {
+    padding: 12px 14px;
+  }
+
+  .notes-title {
+    font-size: 0.8rem;
+    margin: 0 0 8px 0;
+  }
+
+  .notes-display {
+    min-height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .grid-panel {
+    padding: 12px 14px;
   }
 }

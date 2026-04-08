@@ -207,11 +207,13 @@ export default function InteractiveCalendar() {
             <div className="notes-section">
             <h2 className="notes-title">Notes</h2>
             <div className="notes-display">
-              <div className="note-lines">
-                {[...Array(6)].map((_, index) => (
-                  <div key={index} className="note-line" />
-                ))}
-              </div>
+              {!selectedRangeKey || !notes[selectedRangeKey] ? (
+                <div className="note-lines">
+                  {[...Array(6)].map((_, index) => (
+                    <div key={index} className="note-line" />
+                  ))}
+                </div>
+              ) : null}
               {selectedRangeKey && notes[selectedRangeKey] && (
                 <div className="note-preview">
                   <p>{notes[selectedRangeKey]}</p>
